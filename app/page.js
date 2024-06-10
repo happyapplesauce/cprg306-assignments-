@@ -13,6 +13,9 @@ const HomePage = () => {
         <li>
           <a href= "/week-3" style={{ fontSize: '1.5rem', color: 'green'}}>Week 3 Assignment</a>
         </li>
+        <li>
+          <a href= "/week-4" style={{ fontSize: '1.5rem', color: 'green'}}>Week 4 Assignment</a>
+        </li>
       </ul>
     </div>
   );
