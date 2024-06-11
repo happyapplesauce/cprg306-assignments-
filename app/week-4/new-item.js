@@ -18,21 +18,21 @@ export default function NewItem(){
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen">
-        <form onSubmit={handleSubmit} className="p-4 bg-blue-700 rounded-md w-1/3">
-            <div className="mb-4">
-                <label className="block text-sm font-bold mb-2 text-white">Item Name</label>
+        <div style={{diaplay:'flex', justifyContent: 'center', alignItems:'center', minHeight:'100vh'}}>
+        <form onSubmit={handleSubmit} style={{ padding: '16px', backgroundColor: 'blue', borderRadius: '5px', width: '30%'}}>
+            <div style={{marginBottom: '15px'}}>
+                <label style= {{ display: 'block', fontSize: '14px', fontWeight:'bold', color: 'white', marginBottom: '8px'}}>Item Name</label>
                 <input 
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-full px-3 py-2 border rounded bg-white text-black"/>
+                style={{ width: '100%', padding: '8px', border:'1px solid black', borderRadius: '5px', backgroundColor: 'white', color: 'black' }}/>
             </div>
             
-            <div className="flex mb-4 space-x-4">
-                <div className="w-1/4 mr-3">
-                <label className="block text-sm font-bold mb-2 text-white">Quantity</label>
+            <div style= {{display: 'flex', marginBottom: '16px', gap:'5px'}}>
+                <div style={{ flex: '1'}}>
+                <label style={{display: 'block', fontSize: '14px', fontWeight: 'bold', marginBottom:'8px', color:'white'}}>Quantity</label>
                 <input 
                 type="number"
                 value={quantity}
@@ -40,16 +40,17 @@ export default function NewItem(){
                 min="1"
                 max="99"
                 required
-                className="w-full px-3 py-2 border rounded bg-white text-black"/>
+                style={{ width: '100%', padding:'8px', border: '1px solid black', borderRadius: '5px', backgroundColour:'white', color:'black' }}/>
             </div>
 
-            <div className="w-1/3 ml-2">
-                <label className="block text-sm font-bold mb-2 text-white">Category</label>
+            <div style={{flex: '1'}}>
+                <label style={{width: 'block', fontSize: '14px', fontWeight:'bold', marginBottom: '16px', color: 'white'}}>Category</label>
                 <select 
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 required
-                className="w-full px-3 py-2 border rounded bg-white text-black" >
+                style= {{ width: '100%', padding:'8px', border: '1px solid black', backroundColour: 'white', color: 'black'}}>
+                    <option value="category" disabled>Category</option>
                     <option value="produce">Produce</option>
                     <option value="dairy">Dairy</option>
                     <option value="bakery">Bakery</option>
@@ -64,7 +65,7 @@ export default function NewItem(){
                     </select>
             </div>
             </div>
-        <button type= "submit" className="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-blue-700 text-2xl">
+        <button type= "submit" style={{width: '100%', backgroundColor: 'green', color: 'white', padding: '8px 16px', borderRadius: '4px', fontSize: '20px', cursor:'pointer'}}>
             +
         </button>
         </form>
